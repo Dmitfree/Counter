@@ -9,6 +9,8 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var clearResultButton: UIButton!
+    
     @IBOutlet weak var increaseCountButton: UIButton!
     @IBOutlet weak var decreaseCountButton: UIButton!
     
@@ -37,6 +39,11 @@ class ViewController: UIViewController {
     @IBAction func increaseButtonDidLoad(_ sender: Any) {
         result += 1
         countResultLabel.text = "Значение счетчика: \(result)"
+    }
+    
+    @IBAction func clearButtonDidLoad(_ sender: Any) {
+        result = 0
+        countResultLabel.text = "0"
     }
 }
 

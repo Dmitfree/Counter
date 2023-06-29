@@ -3,6 +3,7 @@
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21678"/>
+        <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -54,11 +55,23 @@
                                     <action selector="increaseButtonDidLoad:" destination="BYZ-38-t0r" eventType="touchUpInside" id="S8I-xv-hFP"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4VR-Be-73N">
+                                <rect key="frame" x="148" y="251" width="96" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Clear">
+                                    <imageReference key="image" image="eraser.line.dashed.fill" catalog="system" symbolScale="large"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="clearButtonDidLoad:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Tb4-HO-YJx"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <connections>
+                        <outlet property="clearResultButton" destination="4VR-Be-73N" id="Ye9-mK-LJ2"/>
                         <outlet property="countButton" destination="KtL-6J-Uhu" id="2Dj-o9-dza"/>
                         <outlet property="countResultLabel" destination="jAT-Ga-ia0" id="2jy-QV-OBe"/>
                         <outlet property="decreaseCountButton" destination="a1M-sA-AUL" id="V9s-61-wBm"/>
@@ -71,6 +84,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="eraser.line.dashed.fill" catalog="system" width="128" height="94"/>
         <namedColor name="AccentColor">
             <color red="0.0" green="0.46000000000000002" blue="0.89000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
