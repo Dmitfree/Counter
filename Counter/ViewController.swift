@@ -13,10 +13,10 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var clearResultButton: UIButton!
     
-    @IBOutlet weak var increaseCountButton: UIButton!
-    @IBOutlet weak var decreaseCountButton: UIButton!
+    @IBOutlet weak var plusButton: UIButton!
+    @IBOutlet weak var minusButton: UIButton!
     
-    @IBOutlet weak var countButton: UIButton!
+    @IBOutlet weak var TapButton: UIButton!
     
     @IBOutlet weak var countResultLabel: UILabel!
     
@@ -24,28 +24,18 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        decreaseCountButton.tintColor = .red
+        minusButton.tintColor = .red
         
         logWindow.text = "История изменений:\n"
-        
-  /*  let date = Date()
-        var dateFormatter = DateFormatter()
-        dateFormatter.dateStyle = .short
-        dateFormatter.timeStyle = .short
-        dateFormatter.locale = Locale(identifier: "ru-Ru")
-        var dateString = dateFormatter.string(from: date)
-   
-   не понятно как использовать DateFormatter
-   */
-        
+    
     }
     
-    @IBAction func buttonDidLoad(_ sender: Any) {
+    @IBAction func TapButtonDidLoad(_ sender: Any) {
         result += 1
         countResultLabel.text = "Значение счетчика: \(result)"
     }
     
-    @IBAction func decreaseButtonDidLoad(_ sender: Any) {
+    @IBAction func minusButtonDidLoad(_ sender: Any) {
         if result == 0 {
             countResultLabel.text = "Значение счетчика: 0"
             logWindow.text.append("\(Date()) Попытка уменьшить значение счётчика ниже 0\n")
@@ -56,7 +46,7 @@ class ViewController: UIViewController {
         }
     }
     
-    @IBAction func increaseButtonDidLoad(_ sender: Any) {
+    @IBAction func plusButtonDidLoad(_ sender: Any) {
         result += 1
         countResultLabel.text = "Значение счетчика: \(result)"
         logWindow.text.append("\(Date()) Значение увеличено на +1\n")

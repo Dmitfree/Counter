@@ -2,7 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21678"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
         <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -25,34 +25,34 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KtL-6J-Uhu">
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KtL-6J-Uhu" userLabel="Tap Button">
                                 <rect key="frame" x="108" y="697" width="177" height="35"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="tintColor" name="AccentColor"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="Tap"/>
                                 <connections>
-                                    <action selector="buttonDidLoad:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Edz-Yd-ckJ"/>
+                                    <action selector="tapButtonDidLoad:" destination="BYZ-38-t0r" eventType="touchUpInside" id="pBT-7O-08s"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="a1M-sA-AUL">
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="a1M-sA-AUL" userLabel="Minus Button">
                                 <rect key="frame" x="98" y="599" width="32" height="35"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="tintColor" systemColor="systemRedColor"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="-"/>
                                 <connections>
-                                    <action selector="decreaseButtonDidLoad:" destination="BYZ-38-t0r" eventType="touchUpInside" id="qQp-4Z-Oqm"/>
+                                    <action selector="minusButtonDidLoad:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Wch-Ky-q0m"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2RT-Ke-UvX">
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2RT-Ke-UvX" userLabel="Plus Button">
                                 <rect key="frame" x="262" y="599" width="35" height="35"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="tintColor" systemColor="systemBlueColor"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="+"/>
                                 <connections>
-                                    <action selector="increaseButtonDidLoad:" destination="BYZ-38-t0r" eventType="touchUpInside" id="S8I-xv-hFP"/>
+                                    <action selector="plusButtonDidLoad:" destination="BYZ-38-t0r" eventType="touchUpInside" id="bwq-80-BUg"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4VR-Be-73N">
@@ -80,11 +80,11 @@
                     </view>
                     <connections>
                         <outlet property="clearResultButton" destination="4VR-Be-73N" id="Ye9-mK-LJ2"/>
-                        <outlet property="countButton" destination="KtL-6J-Uhu" id="2Dj-o9-dza"/>
                         <outlet property="countResultLabel" destination="jAT-Ga-ia0" id="2jy-QV-OBe"/>
-                        <outlet property="decreaseCountButton" destination="a1M-sA-AUL" id="V9s-61-wBm"/>
-                        <outlet property="increaseCountButton" destination="2RT-Ke-UvX" id="VNU-RX-byJ"/>
                         <outlet property="logWindow" destination="NPo-Fv-QfS" id="UTM-DA-LX2"/>
+                        <outlet property="minusButton" destination="a1M-sA-AUL" id="vWs-cZ-me7"/>
+                        <outlet property="plusButton" destination="2RT-Ke-UvX" id="0Ri-4P-MN3"/>
+                        <outlet property="tapButton" destination="KtL-6J-Uhu" id="Lch-h6-XXZ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
